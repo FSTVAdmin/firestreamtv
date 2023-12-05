@@ -96,6 +96,28 @@
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/app.js"></script>
 			<script async data-id="101416063" src="//static.getclicky.com/js"></script>
+			<script>
+  let deferredPrompt;
+
+  window.addEventListener('beforeinstallprompt', (event) => {
+    event.preventDefault();
+    deferredPrompt = event;
+  });
+
+  function instalarPWA() {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('Usuario aceptó la instalación');
+        } else {
+          console.log('Usuario canceló la instalación');
+        }
+        deferredPrompt = null;
+      });
+    }
+  }
+</script>
 
 	</body>
 </html>
