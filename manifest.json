@@ -1,18 +1,14 @@
 {
-  "name": "Mi aplicación",
-  "short_name": "Mi app",
+  "name": "FireStreamTV",
+  "short_name": "FSTV",
   "start_url": "/",
   "display": "standalone",
   "icons": [
     {
-      "src": "/img/icon-192x192.png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "/img/icon-512x512.png",
+      "src": "/images/favicos.png",
       "sizes": "512x512"
     }
   ],
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff"
+  "background_color": "#f89a26",
+  "theme_color": "#f89a26"
 }
